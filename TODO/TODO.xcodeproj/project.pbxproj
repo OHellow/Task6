@@ -20,7 +20,6 @@
 		83D2839625892D3E003D3A7F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2839525892D3E003D3A7F /* Colors.swift */; };
 		83D2839A258A3883003D3A7F /* Note_Presenation_C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D28399258A3883003D3A7F /* Note_Presenation_C.swift */; };
 		83D2839D258A38B5003D3A7F /* Note_Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2839C258A38B5003D3A7F /* Note_Animation.swift */; };
-		83D283A0258A38E2003D3A7F /* Transition_Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2839F258A38E2003D3A7F /* Transition_Driver.swift */; };
 		83D283A3258A3951003D3A7F /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D283A2258A3951003D3A7F /* NoteVC.swift */; };
 		83D283AE258A9B42003D3A7F /* RoundColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D283AD258A9B42003D3A7F /* RoundColorButton.swift */; };
 		DF72E46369D69B5051F7370D /* Pods_TODO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4359E99432BE7F7D17E023B /* Pods_TODO.framework */; };
@@ -43,7 +42,6 @@
 		83D2839525892D3E003D3A7F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		83D28399258A3883003D3A7F /* Note_Presenation_C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note_Presenation_C.swift; sourceTree = "<group>"; };
 		83D2839C258A38B5003D3A7F /* Note_Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note_Animation.swift; sourceTree = "<group>"; };
-		83D2839F258A38E2003D3A7F /* Transition_Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition_Driver.swift; sourceTree = "<group>"; };
 		83D283A2258A3951003D3A7F /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
 		83D283AD258A9B42003D3A7F /* RoundColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundColorButton.swift; sourceTree = "<group>"; };
 		A4359E99432BE7F7D17E023B /* Pods_TODO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TODO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +122,6 @@
 			children = (
 				83D28399258A3883003D3A7F /* Note_Presenation_C.swift */,
 				83D2839C258A38B5003D3A7F /* Note_Animation.swift */,
-				83D2839F258A38E2003D3A7F /* Transition_Driver.swift */,
 			);
 			path = Note_Presentation;
 			sourceTree = "<group>";
@@ -250,7 +247,6 @@
 				83D2836325892BC3003D3A7F /* AppDelegate.swift in Sources */,
 				83D2839D258A38B5003D3A7F /* Note_Animation.swift in Sources */,
 				83D2839625892D3E003D3A7F /* Colors.swift in Sources */,
-				83D283A0258A38E2003D3A7F /* Transition_Driver.swift in Sources */,
 				83D2839025892D0E003D3A7F /* FirebaseManager.swift in Sources */,
 				83D283AE258A9B42003D3A7F /* RoundColorButton.swift in Sources */,
 				83D283A3258A3951003D3A7F /* NoteVC.swift in Sources */,

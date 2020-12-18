@@ -13,19 +13,7 @@ class RoundColorButton: UIButton {
             self.layer.cornerRadius = cornerRadius
         }
     }
-    
-//    var borderWidth : CGFloat = 0 {
-//        didSet{
-//            self.layer.borderWidth = borderWidth
-//        }
-//    }
-//
-//    var borderColor : UIColor = UIColor.clear {
-//        didSet{
-//            self.layer.borderColor = borderColor.cgColor
-//        }
-//    }
-    
+        
     var isSet: Bool = false {
         didSet {
             if isSet == true {

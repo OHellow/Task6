@@ -8,7 +8,7 @@
 import UIKit
 
 protocol NoteDelegate {
-    func handleData(title: String, color: UIColor, key: String)
+    func handleData(title: String, color: UIColor, key: String, font: Int)
     
     func handleDeleteNote(key: String)
 }
@@ -21,8 +21,9 @@ class NoteVC: UIViewController {
          textView.text = "New Note"
          textView.textAlignment = .left
          textView.backgroundColor = .clear
-         textView.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.light)
+//         textView.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.light)
          textView.isEditable = true
+         //textView.allowsEditingTextAttributes = true
          return textView
      }()
     
@@ -36,6 +37,36 @@ class NoteVC: UIViewController {
         return button
     }()
     
+    let sizeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "16"
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textColor = UIColor(red: 0.078, green: 0.08, blue: 0.087, alpha: 1)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    let increaseFontButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.heightAnchor.constraint(equalToConstant: 8).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 8).isActive = true
+        button.setImage(UIImage(systemName: "plus"), for: .normal)
+        button.addTarget(self, action: #selector(handleIncrease), for: .touchUpInside)
+        return button
+    }()
+    
+    let decreaseFontButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.heightAnchor.constraint(equalToConstant: 8).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 8).isActive = true
+        button.setImage(UIImage(systemName: "minus"), for: .normal)
+        button.addTarget(self, action: #selector(handleDecrease), for: .touchUpInside)
+        return button
+    }()
+    
     let blueButton = RoundColorButton()
     let pinkButton = RoundColorButton()
     let yellowButton = RoundColorButton()
@@ -44,6 +75,7 @@ class NoteVC: UIViewController {
     var noteBackgroundColor: UIColor
     var text: String = ""
     var keyOfNote: String
+    var fontSize: Int = 16
     var delegate: NoteDelegate?
     
     init(color: UIColor, key: String) {
@@ -69,7 +101,7 @@ class NoteVC: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        delegate?.handleData(title: text, color: noteBackgroundColor, key: keyOfNote)
+        delegate?.handleData(title: text, color: noteBackgroundColor, key: keyOfNote, font: fontSize)
         super.viewWillDisappear(true)
         print("AAAAAAAAAAAAAAAAAA")
         print(text)
@@ -104,6 +136,20 @@ class NoteVC: UIViewController {
         default:
             print("failed to set color")
         }
+    }
+    
+    @objc func handleIncrease() {
+        print("increase")
+        fontSize += 1
+        textView.font = UIFont.systemFont(ofSize: CGFloat(fontSize))
+        sizeLabel.text = "\(fontSize)"
+    }
+    
+    @objc func handleDecrease() {
+        print("decrease")
+        fontSize -= 1
+        textView.font = UIFont.systemFont(ofSize: CGFloat(fontSize))
+        sizeLabel.text = "\(fontSize)"
     }
 }
     //MARK: Setup Layout
@@ -162,8 +208,20 @@ extension NoteVC {
             blueButton.isSet = true
         }
         
+        topContainer.addSubview(sizeLabel)
+        sizeLabel.text = "\(fontSize)"
+        sizeLabel.centerYAnchor.constraint(equalTo: topContainer.centerYAnchor).isActive = true
+        sizeLabel.centerXAnchor.constraint(equalTo: topContainer.centerXAnchor, constant: -30).isActive = true
+        topContainer.addSubview(increaseFontButton)
+        increaseFontButton.leftAnchor.constraint(equalTo: sizeLabel.rightAnchor, constant: 5).isActive = true
+        increaseFontButton.bottomAnchor.constraint(equalTo: sizeLabel.topAnchor, constant: 5).isActive = true
+        topContainer.addSubview(decreaseFontButton)
+        decreaseFontButton.leftAnchor.constraint(equalTo: sizeLabel.rightAnchor, constant: 5).isActive = true
+        decreaseFontButton.topAnchor.constraint(equalTo: sizeLabel.bottomAnchor, constant: -5).isActive = true
+        
         view.addSubview(textView)
         textView.text = text
+        textView.font = UIFont.systemFont(ofSize: CGFloat(fontSize), weight: UIFont.Weight.light)
         textView.topAnchor.constraint(equalTo: topContainer.bottomAnchor).isActive = true
         textView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 15).isActive = true
         textView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -15).isActive = true

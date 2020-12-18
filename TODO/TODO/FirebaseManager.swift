@@ -11,8 +11,8 @@ import UIKit
 class FirebaseManager {
     var ref: DatabaseReference = Database.database().reference(withPath: "to-do")
     
-    func uploadNote(key: String, title: String, color: String, index: Int) {
-        let data = ["key": key, "title": title, "color": color, "index": index] as [String : Any]
+    func uploadNote(key: String, title: String, color: String, index: Int, font: Int = 16) {
+        let data = ["key": key, "title": title, "color": color, "index": index, "font": font] as [String : Any]
         updateChild(childName: key, data: data)
     }
     

@@ -13,12 +13,14 @@ struct NoteModel {
     var color: UIColor
     var key: String
     var indexPath: Int
+    var font: Int
     
-    init(key: String, title: String, color: String, index: Int) {
+    init(key: String, title: String, color: String, index: Int, font: Int = 16) {
         self.title = title
         self.key = key
         self.indexPath = index
         self.color = getColor(colorName: color)
+        self.font = font
     }
     
     init?(snapshot: DataSnapshot) {
@@ -27,7 +29,8 @@ struct NoteModel {
         let title = value["title"] as? String,
         let color = value["color"] as? String,
         let key = value["key"] as? String,
-        let index = value["index"] as? Int else {
+        let index = value["index"] as? Int,
+        let fontSize = value["font"] as? Int else {
         return nil
       }
         
@@ -35,5 +38,6 @@ struct NoteModel {
         self.key = key
         self.indexPath = index
         self.color = getColor(colorName: color)
+        self.font = fontSize
     }
 }

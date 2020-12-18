@@ -42,7 +42,7 @@ class PresentationController: UIPresentationController {
         let bounds = containerView!.bounds
         let halfHeight = bounds.height / 3
         return CGRect(x: 15,
-                      y: halfHeight,
+                      y: bounds.height / 4,
                       width: bounds.width - 30,
                       height: halfHeight)
     }
