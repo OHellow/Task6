@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83401040258CA9B1005186A8 /* NoteBoard_DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8340103F258CA9B1005186A8 /* NoteBoard_DragDrop.swift */; };
 		83D2836325892BC3003D3A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2836225892BC3003D3A7F /* AppDelegate.swift */; };
 		83D2836525892BC3003D3A7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2836425892BC3003D3A7F /* SceneDelegate.swift */; };
 		83D2836725892BC3003D3A7F /* NotesBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2836625892BC3003D3A7F /* NotesBoardVC.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		3E4CE0CBFF1B02E4970DC046 /* Pods-TODO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TODO.release.xcconfig"; path = "Target Support Files/Pods-TODO/Pods-TODO.release.xcconfig"; sourceTree = "<group>"; };
+		8340103F258CA9B1005186A8 /* NoteBoard_DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBoard_DragDrop.swift; sourceTree = "<group>"; };
 		83D2835F25892BC3003D3A7F /* TODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D2836225892BC3003D3A7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D2836425892BC3003D3A7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,10 +103,11 @@
 				83D2836225892BC3003D3A7F /* AppDelegate.swift */,
 				83D2836425892BC3003D3A7F /* SceneDelegate.swift */,
 				83D2836625892BC3003D3A7F /* NotesBoardVC.swift */,
-				83D283A2258A3951003D3A7F /* NoteVC.swift */,
+				8340103F258CA9B1005186A8 /* NoteBoard_DragDrop.swift */,
 				83D2838C25892CF2003D3A7F /* NoteCell.swift */,
-				83D2838F25892D0E003D3A7F /* FirebaseManager.swift */,
+				83D283A2258A3951003D3A7F /* NoteVC.swift */,
 				83D2839225892D25003D3A7F /* NoteModel.swift */,
+				83D2838F25892D0E003D3A7F /* FirebaseManager.swift */,
 				83D2839525892D3E003D3A7F /* Colors.swift */,
 				83D283AD258A9B42003D3A7F /* RoundColorButton.swift */,
 				83D283A5258A3AD7003D3A7F /* Note_Presentation */,
@@ -252,6 +255,7 @@
 				83D283A3258A3951003D3A7F /* NoteVC.swift in Sources */,
 				83D2836525892BC3003D3A7F /* SceneDelegate.swift in Sources */,
 				83D2838D25892CF2003D3A7F /* NoteCell.swift in Sources */,
+				83401040258CA9B1005186A8 /* NoteBoard_DragDrop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
